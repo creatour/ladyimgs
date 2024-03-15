@@ -49,3 +49,29 @@ function downloadAllPhotos() {
     document.body.removeChild(link);
   });
 }
+
+/* Existing functions */
+
+function openLightbox(index) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+  const slides = document.querySelectorAll(".slider img");
+  const body = document.querySelector("body");
+
+  // Set background image to the clicked image
+  body.style.backgroundImage = `url('${slides[index].src}')`;
+  body.style.backgroundSize = "cover"; // Adjust background size to cover the entire page
+
+  // Set lightbox image
+  lightboxImage.src = slides[index].src;
+  lightbox.style.display = "block";
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  const body = document.querySelector("body");
+
+  // Reset background image and hide lightbox
+  body.style.backgroundImage = "none";
+  lightbox.style.display = "none";
+}
