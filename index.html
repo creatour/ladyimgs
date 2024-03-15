@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lady Image</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="pic1.jpg" alt="Image 1" onclick="openLightbox(0)" />
+        <img src="pic2.jpg" alt="Image 2" onclick="openLightbox(1)" />
+        <img src="pic3.jpg" alt="Image 3" onclick="openLightbox(2)" />
+        <img src="pic4.jpg" alt="Image 4" onclick="openLightbox(3)" />
+        <img src="pic5.jpg" alt="Image 5" onclick="openLightbox(4)" />
+      </div>
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      <button class="download-btn" onclick="downloadAllPhotos()">
+        Click here to download all photos
+      </button>
+    </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="close">&times;</span>
+      <img id="lightbox-image" class="lightbox-content" src="" alt="" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
